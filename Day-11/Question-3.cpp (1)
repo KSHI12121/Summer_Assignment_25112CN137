@@ -1,0 +1,32 @@
+//Q. 2 : Program to check prime numbers using function
+#include <iostream>
+using namespace std;
+
+int prime(int n){
+    if (n==1){ //For n=1
+        cout << "1 is neither prime nor composite.";
+        return 0;
+    }
+    int i;
+    for (i=2;i<=n/2;i++){
+        if (n%i==0){ //Checking for factors
+            cout << "It is not a prime number.";
+            return 0;
+        }
+    }
+    cout << "It is a prime number.";
+    return 0;
+}
+
+int main() {
+    int n;
+    cout << "Enter number to check whether it is prime or not: ";
+    cin >> n;
+    //Exception handling
+    if (n<=0){
+        cout << "It is not a prime number.";
+        return 0;
+    }
+    prime(n); //Function calling
+    return 0;
+}
