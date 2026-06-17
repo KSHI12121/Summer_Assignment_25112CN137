@@ -1,0 +1,20 @@
+//Q. 2 : Program to find maximum of two numbers using function
+#include <iostream>
+using namespace std;
+
+//Function to find maximum of two numbers
+int max(int a,int b){
+    if (a>=b){
+        return a; 
+    }
+    else {
+        return b;
+    }
+}
+int main() {
+    int x,y;
+    cout << "Enter values to find out maximum number (Format:x y): ";
+    cin >> x >> y;
+    cout << "The maximum value of the two numbers is " << max(x,y);
+    return 0;
+}

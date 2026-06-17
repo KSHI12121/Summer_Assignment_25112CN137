@@ -1,0 +1,25 @@
+//Q. 4 : Program to find factorial using functions
+#include <iostream>
+using namespace std;
+//Recursive function to find factorial
+long long fact(long long n){
+    if (n==1 || n==0){
+        return 1;
+    }
+    else {
+        return n*fact(n-1);
+    }
+}
+
+int main() {
+    long long n;
+    cout << "Enter number to find factorial: ";
+    cin >> n;
+    //Exception handling
+    if (n<0){
+        cout << "Invalid number!";
+        return 0;
+    }
+    cout << "Factorial of the entered number is : " << fact(n);
+    return 0;
+}
